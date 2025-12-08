@@ -22,7 +22,7 @@ const ForecastCard: React.FC<ForecastProps> = ({forecast}) => {
             setLoadingCities(false);
         };
         fetchOtherCities();
-    })
+    },[]);
 // Get today's sunrise & sunset times
 const sunriseTime = new Date(`1970-01-01T${forecast[0]?.sunrise}`);
 const sunsetTime = new Date(`1970-01-01T${forecast[0]?.sunset}`);
@@ -128,6 +128,7 @@ const checkIsDay = (timeString: string): boolean => {
                         </div>
                         </div>
                     </div>
+                    {/*other cities data*/}
                     <div className="col-lg-5 text-start" >
                     <div className="other-cities p-4" data-aos="fade-left">   
                     <h3 className="h3-type head">Other Cities</h3>
