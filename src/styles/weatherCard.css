@@ -151,31 +151,49 @@ max-width: 50%;
 
 /* Fix for other cities section on mobile */
 @media (max-width: 576px) {
-.other-cities {
-  padding: 1rem 0.5rem !important; /* Reduce padding on mobile */
+/* Target the parent column containing other-cities */
+.col-lg-5.text-start {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
 }
 
-.other-cities .row {
-  padding: 0.5rem !important; /* Reduce row padding */
-  margin: 0 !important; /* Remove margin */
+.other-cities {
+  padding: 1rem 0.25rem !important; /* Reduce padding on mobile */
+}
+
+.other-cities .row.p-3 {
+  padding: 0.25rem !important; /* Reduce row padding */
+  margin-left: 0 !important; /* Remove left margin */
+  margin-right: 0 !important; /* Remove right margin */
 }
 
 .other-cities .col-lg-6,
 .other-cities .col-md-6,
 .other-cities .col-sm-6,
-.other-cities .col-xs-6 {
+.other-cities .col-sx-6 {
   padding-left: 0.25rem !important; /* Reduce column padding */
   padding-right: 0.25rem !important;
 }
 
 .other-cities .other-city-data {
-  padding: 0.5rem !important; /* Reduce card padding */
+  padding: 0.75rem !important; /* Slightly more padding inside card */
+}
+
+.other-cities .other-city-data .col-lg-7 {
+  padding-left: 0.5rem !important;
+  padding-right: 0.25rem !important;
+}
+
+.other-cities .other-city-data .col-lg-5 {
+  padding-left: 0.25rem !important;
+  padding-right: 0.5rem !important;
 }
 
 .other-cities .other-city-data h4,
 .other-cities .other-city-data p {
   font-size: 0.85rem; /* Slightly smaller text */
   margin: 2px;
+  word-wrap: break-word; /* Prevent overflow */
 }
 
 .other-cities .other-city-data .row {
@@ -184,6 +202,22 @@ max-width: 50%;
 
 .other-cities .other-city-data h1 {
   font-size: 1.5rem !important; /* Reduce emoji size */
+}
+}
+
+/* Additional fix for forecast card container */
+@media (max-width: 576px) {
+.forecast-card.container {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
+.forecast-card-body {
+  padding: 0.5rem !important;
+}
+
+.forecast-card-body .row.gx-5 {
+  --bs-gutter-x: 0.5rem !important;
 }
 }
 
