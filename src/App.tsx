@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 // import "aos/dist/aos.css";
 import './styles/colors.css';
 import { weatherData, forecastDay } from "./types/weatherTypes";
+import SplashScreen from './components/splashScreen';
 import  NavBar  from './components/NavBar';
 import WeatherCard from "./components/weatherCard";
 import ForecastCard from './components/forecastCard';
@@ -13,21 +14,15 @@ import './App.css';
 import getWeather from './api/weatherAPI';
 
 function App() {
+  const [loading,setLoading] = useState(true);
   const [weather, setWeather]=useState<weatherData | null>(null);
   const [forecast, setForecast]=useState<forecastDay[]>([]);
   const [location, setLocation]=useState("Amritsar"); // default city
-  const [searchTerm, setSearchTerm] = useState(""); // search bar input
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration: 900,
-  //     easing: "ease-out",
-  //     once: false,
-  //     mirror: true
-  //   });
-  //   setTimeout(() => {
-  //     AOS.refresh();
-  //   }, 300);
-  // }, []);
+  
+  useEffect(()=>{
+    const timer=setTimeout(()=>setLoading(false),2500);
+    return ()=>clearTimeout(timer);
+  },[]);
   useEffect(() => {
     const fetchData = async () => {
       const data = await getWeather(location);
@@ -38,7 +33,7 @@ function App() {
     };
     fetchData();
   }, [location]);
-
+if(loading) {return <SplashScreen />}
   return (
     <div className="main-page text-center ">
       <NavBar onSearch={(city)=>setLocation(city)}/>
