@@ -1,46 +1,44 @@
-# Getting Started with Create React App
+## 🌦️ ClimaCheck
+ ![React](https://img.shields.io/badge/React-18-blue?logo=react)
+ ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?logo=bootstrap)
+![Weather API](https://img.shields.io/badge/API-WeatherAPI-green)
+![Responsive](https://img.shields.io/badge/Responsive-Yes-success)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+ClimaCheck is a responsive weather forecasting web application that provides real-time weather updates, hourly forecast and next day forecast.
+City based insights are also included.
+It is built with clean UI, smooth interaction, and a focus on usability and performance.
 
-In the project directory, you can run:
+## Deployement
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-ClimaCheck-0EA5E9?style=for-the-badge&logo=weather&logoColor=white)](https://clima-check-jp.vercel.app/)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🚀 Features
+1. Search Any Location
+2. Dark/Light mode Toggle
+3. Real-Time Weather Data
+4. Hourly and Tomorrow forecast
+5. Other Cities Weather Section
+6. Professional and Responsive UI
 
-### `npm test`
+## 🛠️ Tech Stack
+1. Frontend: React.js + TypeScript
+2. Styling: CSS + Bootstarp
+3. API: WeatherAPI
+4. State Management: React Hooks(useState, useEffect)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## 📚 What I learned
+1. Usage of TypeScript in React
+2. API Integration and async data handling
+3. Building search suggestions with dynamic UI updates
+4. Responsive design
+5. Clean component based architecture
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🌟 Feedback and Support
+If you find this project useful for learning, feel free to ⭐ this repository and share your feedback.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
